@@ -12,10 +12,10 @@ generator client {
 // ============================================
 
 // Opción 1: SQLite (Por defecto - Desarrollo local)
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
+//datasource db {
+//  provider = "sqlite"
+//  url      = env("DATABASE_URL")
+//}
 
 // Opción 2: MySQL (Producción)
 // datasource db {
@@ -24,10 +24,10 @@ datasource db {
 // }
 
 // Opción 3: PostgreSQL (Producción)
-// datasource db {
-//   provider = "postgresql"
-//   url      = env("DATABASE_URL")
-// }
+ datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+ }
 
 // ============================================
 // MODELO: USUARIO - Sistema de autenticación con roles
