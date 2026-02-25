@@ -59,6 +59,7 @@ import { Toaster } from "@/components/ui/toaster";
 interface Client {
   id: string;
   cedula: string;
+  rh: string;
   nombreCompleto: string;
 }
 
@@ -407,7 +408,7 @@ export function PhotoRegistration() {
                       <TableCell>
                         <div>
                           <p className="font-medium truncate max-w-[120px]">{photo.client.nombreCompleto}</p>
-                          <p className="text-xs text-muted-foreground">{photo.client.cedula}</p>
+                          <p className="text-xs text-muted-foreground">{photo.client.rh}</p>
                         </div>
                       </TableCell>
                       <TableCell>

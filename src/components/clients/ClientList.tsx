@@ -109,9 +109,9 @@ export function ClientList() {
 
   // Copiar primer apellido al portapapeles
   const copyFirstLastName = async (client: Client) => {
-    // Extraer el primer apellido (segunda palabra del nombre completo)
-    const parts = client.nombreCompleto.trim().split(/\s+/);
-    const firstLastName = parts.length > 1 ? parts[parts.length - 1] : client.nombreCompleto;
+   // Extraer el primer apellido (primera palabra del nombre completo)
+const parts = client.nombreCompleto.trim().split(/\s+/);
+const firstLastName = parts.length > 0 ? parts[0] : client.nombreCompleto;
     
     try {
       await navigator.clipboard.writeText(firstLastName);
