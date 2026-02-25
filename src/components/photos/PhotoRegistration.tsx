@@ -76,6 +76,7 @@ interface PhotoRecord {
   client: {
     id: string;
     cedula: string;
+    rh: string;
     nombreCompleto: string;
   };
   user: {
