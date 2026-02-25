@@ -78,7 +78,7 @@ export async function PUT(
         notas: notas !== undefined ? notas : existingPhoto.notas
       },
       include: {
-        client: { select: { id: true, cedula: true, nombreCompleto: true, rh: true } }
+        client: { select: { id: true, cedula: true, nombreCompleto: true } }
       }
     });
 
