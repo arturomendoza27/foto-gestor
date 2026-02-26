@@ -360,7 +360,7 @@ export function PhotoRegistration() {
         <Input
           placeholder="Buscar por referencia, cédula o nombre..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch(e.target.value.toUpperCase())}
           className="pl-10 h-12"
         />
         {search && (
@@ -575,7 +575,9 @@ export function PhotoRegistration() {
                     </Label>
                     <Input
                       id="fotoConGorra"
-                      placeholder="Ej: F-001-G"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      placeholder="Ej: 001"
                       value={formData.fotoConGorra}
                       onChange={(e) => setFormData({ ...formData, fotoConGorra: e.target.value })}
                       className="h-10"
@@ -594,7 +596,9 @@ export function PhotoRegistration() {
                     </Label>
                     <Input
                       id="fotoSinGorra"
-                      placeholder="Ej: F-001-SG"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      placeholder="Ej: 002"
                       value={formData.fotoSinGorra}
                       onChange={(e) => setFormData({ ...formData, fotoSinGorra: e.target.value })}
                       className="h-10"
@@ -613,7 +617,9 @@ export function PhotoRegistration() {
                     </Label>
                     <Input
                       id="fotoDeFrente"
-                      placeholder="Ej: F-001-F"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      placeholder="Ej: 003"
                       value={formData.fotoDeFrente}
                       onChange={(e) => setFormData({ ...formData, fotoDeFrente: e.target.value })}
                       className="h-10"
