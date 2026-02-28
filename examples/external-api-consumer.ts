@@ -7,7 +7,7 @@
  * EJEMPLO 1: Uso básico con fetch
  */
 async function fetchWithBearerToken() {
-  const API_URL = 'http://localhost:3000/api/external/photos';
+  const API_URL = 'https://foto-gestor.vercel.app//api/external/photos';
   const BEARER_TOKEN = 'TU_TOKEN_AQUI'; // Reemplazar con token real
 
   try {
@@ -39,7 +39,7 @@ async function fetchWithBearerToken() {
 import axios from 'axios';
 
 async function axiosWithBearerToken() {
-  const API_URL = 'http://localhost:3000/api/external/photos';
+  const API_URL = 'https://foto-gestor.vercel.app/api/external/photos';
   const BEARER_TOKEN = 'TU_TOKEN_AQUI';
 
   try {
@@ -86,7 +86,7 @@ class ExternalApiClient {
   private token: string;
 
   constructor(options: ApiOptions) {
-    this.baseUrl = options.baseUrl || 'http://localhost:3000/api/external';
+    this.baseUrl = options.baseUrl || 'https://foto-gestor.vercel.app/api/external';
     this.token = options.token;
   }
 
@@ -132,7 +132,7 @@ class ExternalApiClient {
 async function exampleClientUsage() {
   const client = new ExternalApiClient({
     token: 'TU_TOKEN_AQUI',
-    baseUrl: 'http://localhost:3000/api/external'
+    baseUrl: 'https://foto-gestor.vercel.app//api/external'
   });
 
   try {
@@ -161,19 +161,19 @@ const curlExamples = `
 
 # 1. Obtener todas las fotos (limit 100 por defecto)
 curl -H "Authorization: Bearer TU_TOKEN_AQUI" \\
-     "http://localhost:3000/api/external/photos"
+     "https://foto-gestor.vercel.app//api/external/photos"
 
 # 2. Filtrar por cédula y limitar a 5 resultados
 curl -H "Authorization: Bearer TU_TOKEN_AQUI" \\
-     "http://localhost:3000/api/external/photos?cedula=123&limit=5"
+     "https://foto-gestor.vercel.app//api/external/photos?cedula=123&limit=5"
 
 # 3. Solo ver headers de respuesta (útil para debugging)
 curl -I -H "Authorization: Bearer TU_TOKEN_AQUI" \\
-     "http://localhost:3000/api/external/photos"
+     "https://foto-gestor.vercel.app//api/external/photos"
 
 # 4. Guardar respuesta en archivo JSON
 curl -H "Authorization: Bearer TU_TOKEN_AQUI" \\
-     "http://localhost:3000/api/external/photos?limit=10" \\
+     "https://foto-gestor.vercel.app//api/external/photos?limit=10" \\
      -o fotos.json
 `;
 
