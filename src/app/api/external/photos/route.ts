@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const cedula = searchParams.get("cedula") || "";
     const limitParam = searchParams.get("limit");
-    const limit = limitParam ? parseInt(limitParam, 10) : 100;
+    const limit = limitParam ? parseInt(limitParam, 10) : 300;
 
     // Validar límite
     if (limit < 1 || limit > 1000) {
